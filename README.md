@@ -1,5 +1,5 @@
-# RewiesFilter
-RewiesFilter App
+# ReviewsFilter
+ReviewsFilter App
 
 Short app in which Reviews are read from an external JSON file, and are later on filtered from the input given from a form.
 
