@@ -33,5 +33,4 @@ public class ReviewsModel {
     public String href;
     public String logoHref;
     public List<String> photos;
-
 }

@@ -14,8 +14,6 @@ import static com.example.rewiesfilter.Data.JsonParser.filterByRating;
 @Controller
 public class ReviewsFormController {
 
-
-
     @GetMapping("ReviewForm")
     public String GetReviewForm(){
         return "ReviewForm";
@@ -26,19 +24,19 @@ public class ReviewsFormController {
         boolean prioritizeByText, highestRatingFirst,newestFirst;
 
         String prioritize = request.getParameter("TextPriority");
-        if(prioritize == "true"){
+        if("true".equals(prioritize)){
             prioritizeByText = true;
-        } else prioritizeByText = false;
+        } else { prioritizeByText = false; }
 
         String RatingFirst = request.getParameter("RatingFilter");
         if(RatingFirst.equals("HighestFirst")){
             highestRatingFirst = false;
-        } else highestRatingFirst = true;
+        } else { highestRatingFirst = true;}
 
         String newest = request.getParameter("DateFilter");
-        if(newest == "Newest"){
+        if(newest.equals("Newest")){
             newestFirst = true;
-        } else  newestFirst = false;
+        } else { newestFirst = false;}
 
         String min = request.getParameter("MinRating");
         int minimumRating = Integer.parseInt(min);
@@ -49,5 +47,4 @@ public class ReviewsFormController {
 
         return "FilteredReviews";
     }
-
 }
