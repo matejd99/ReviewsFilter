@@ -7,12 +7,13 @@
 <body>
 
 <ul th:each="review: ${reviews}">
-    <li th:text="${review.reviewText}"></li>
-    <li th:text="${review.rating}"></li>
-    <li th:text="${review.reviewCreatedOnDate}"></li>
+    <li th:text="${review.reviewId}"></li>
+    <ul>
+        <li th:text="${review.reviewText}"></li>
+        <li th:text="${review.rating}"></li>
+        <li th:text="${review.reviewCreatedOnDate}"></li>
+    </ul>
 </ul>
-
-
 
 </body>
 </html>

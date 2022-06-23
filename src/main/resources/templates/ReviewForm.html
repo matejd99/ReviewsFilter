@@ -5,32 +5,38 @@
     <title>ReviewForm</title>
 </head>
 <body>
-<h2>Filter Reviews</h2>
-<form id="FilterForm" method="get" action="/FilteredReviews">
-    <label for="RatingFilter">Order by rating:</label></br>
-    <select id="RatingFilter" name="RatingFilter">
-        <option value="HighestFirst">Highest First</option>
-        <option value="LowestFirst">Lowest First</option>
-    </select> </br></br>
-    <label for="MinRating">Minimum rating:</label></br>
-    <select id="MinRating" name="MinRating">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select></br></br>
-    <label for="DateFilter">Order by date:</label></br>
-    <select id="DateFilter" name="DateFilter">
-        <option value="Oldest">Oldest First</option>
-        <option value="Newest">Newest First</option>
-    </select></br></br>
-    <label for="TextPriority" name="TextPriority">Prioritize by text:</label></br>
-    <select id="TextPriority">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select></br></br>
-    <button id="filter" type="submit" th:value="Submit">Filter</button>
-</form>
+    <h2>Filter Reviews</h2>
+
+    <form id="FilterForm" method="get" action="/FilteredReviews">
+
+        <label for="RatingFilter">Order by rating:</label></br>
+        <select id="RatingFilter" name="RatingFilter">
+            <option value="HighestFirst">Highest First</option>
+            <option value="LowestFirst">Lowest First</option>
+        </select> </br></br>
+
+        <label for="MinRating">Minimum rating:</label></br>
+        <select id="MinRating" name="MinRating">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select></br></br>
+
+        <label for="DateFilter">Order by date:</label></br>
+        <select id="DateFilter" name="DateFilter">
+            <option value="Oldest">Oldest First</option>
+            <option value="Newest">Newest First</option>
+        </select></br></br>
+
+        <label for="TextPriority" name="TextPriority">Prioritize by text:</label></br>
+        <select id="TextPriority">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select></br></br>
+
+        <button id="filter" type="submit" th:value="Submit">Filter</button>
+    </form>
 </body>
 </html>

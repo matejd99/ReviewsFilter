@@ -1,12 +1,9 @@
-package com.example.rewiesfilter.Data.Controller;
+package com.example.rewiesfilter.Controller;
 
-import com.example.rewiesfilter.Data.JsonParser;
 import com.example.rewiesfilter.Models.ReviewsModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -15,7 +12,7 @@ import java.util.List;
 import static com.example.rewiesfilter.Data.JsonParser.filterByRating;
 
 @Controller
-public class RewievsFormController {
+public class ReviewsFormController {
 
 
 
@@ -51,12 +48,6 @@ public class RewievsFormController {
         model.addAttribute("reviews", reviews);
 
         return "FilteredReviews";
-    }
-
-    @GetMapping("listReviws")
-    public String listReviews(Model model) throws IOException {
-        model.addAttribute("reviews", JsonParser.GetReviews());
-        return "listReviws";
     }
 
 }
